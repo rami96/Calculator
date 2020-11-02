@@ -23,7 +23,7 @@ body{
              -10px -10px 29px #ffffff;
 }
 
-#screen{
+#display-div{
     margin-top: 12px;
     margin-bottom: 12px;
     background-color: rgb(88, 88, 88);
@@ -37,7 +37,7 @@ body{
              -4px -4px 8px #ffffff;
 }
 
-#maintext{
+#display{
     color: white;
     margin-right: 20px;
     font-weight: bold;

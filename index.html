@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
-    <div id="cont">
-        <div id="screen"><p id="maintext">912</p></div>
-        <div id="buttons">
-            <button class="btn" id="clear">AC</button>
-            <button class="bck" id="bck">B</button>
-            <button class="btnoperator" id="/">/</button>
-            <button class="btnnum" id="7">7</button>
-            <button class="btnnum" id="8">8</button>
-            <button class="btnnum" id="9">9</button>
-            <button class="btnoperator" id="*">*</button>
-            <button class="btnnum" id="4">4</button>
-            <button class="btnnum" id="5">5</button>
-            <button class="btnnum" id="6">6</button>
-            <button class="btnoperator" id="-">-</button>
-            <button class="btnnum" id="1">1</button>
-            <button class="btnnum" id="2">2</button>
-            <button class="btnnum" id="3">3</button>
-            <button class="btnoperator" id="+">+</button>
-            <button class="btnnum" id=".">.</button>
-            <button class="btnnum" id="0">0</button>
-            <button class="btn" id="enter">=</button>
-        </div>
-    </div>
 </head>
 <body>
+    <div id="cont">
+        <div id="display-div">
+            <p id="display">0</p>
+        </div>
+        <div id="buttons">
+            <button type="button" id="clear" onclick="clearAll()" class="button-operation" id="button-clear">AC</button>
+            <button type="button" onclick="bcksppace()" class="btnoperator" class="button-operation" id="button-back">B</button>
+            <button type="button" class="btnoperator"  onclick="setOperator('divide')" class="button-operation">/</button>
+            <button type="button" class="btnnum" onclick="setNumber('7')" class="button-number">7</button>
+            <button type="button" class="btnnum" onclick="setNumber('8')" class="button-number">8</button>
+            <button type="button" class="btnnum" onclick="setNumber('9')" class="button-number">9</button>
+            <button type="button" class="btnoperator"  onclick="setOperator('multiply')" class="button-operation">x</button>
+            <button type="button" class="btnnum" onclick="setNumber('4')" class="button-number">4</button>
+            <button type="button" class="btnnum" onclick="setNumber('5')" class="button-number">5</button>
+            <button type="button" class="btnnum" onclick="setNumber('6')" class="button-number">6</button>            
+            <button type="button" class="btnoperator" onclick="setOperator('subtract')" class="button-operation">-</button>
+            <button type="button" class="btnnum" onclick="setNumber('1')" class="button-number">1</button>
+            <button type="button" class="btnnum" onclick="setNumber('2')" class="button-number">2</button>
+            <button type="button" class="btnnum" onclick="setNumber('3')" class="button-number">3</button>
+            <button type="button" class="btnoperator" onclick="setOperator('add')" class="button-operation" id="button-add">+</button>
+
+            <button type="button" class="btnnum" onclick="setNumber('.')" class="button-number" id="button-period">.</button>
+            <button type="button" class="btnnum" onclick="setNumber('0')" class="button-number" id="button-zero">0</button>
+            <button type="button" id="enter" onclick="operate()" class="button-operation" id="button-equals">=</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
